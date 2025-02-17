@@ -1,0 +1,33 @@
+.green-bg {
+    width: 100%;
+    background-color: var(--green);
+    min-height: 45px;
+    color: var(--white);
+}
+
+.baner-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: right;
+    font-weight: 600;
+    font-size: 16px;
+    min-height: inherit;
+    position: relative;
+}
+
+.baner-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.baner-support {
+    margin-left: 40px;
+    color: var(--white);
+}
+
+.baner-currency {
+    cursor: pointer;
+    font-weight: 400;
+}

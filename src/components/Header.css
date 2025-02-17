@@ -1,0 +1,44 @@
+.header-bg {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    min-height: 60px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: inherit;
+}
+
+
+.header-links {
+
+}
+
+.header-links a {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 17px;
+    padding: 10px;
+    margin: 0 32px;
+}
+
+
+.header-right {
+    display: flex;
+    align-items: center;
+    
+}
+
+.header-search {
+    color: var(--textgrey);
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.header-search img{
+    margin-left: 8px;
+    display: inline-block;
+}
