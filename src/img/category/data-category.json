@@ -1,0 +1,8 @@
+[  
+    { "id": 1, "title": "Bonsai", "fileName": "bonsai.svg" },  
+    { "id": 2, "title": "Cacti", "fileName": "cacti.svg" },  
+    { "id": 3, "title": "Creepers", "fileName": "creepers.svg" }, 
+    { "id": 4, "title": "Succulents", "fileName": "succulents.svg" },  
+    { "id": 5, "title": "Seeds", "fileName": "seeds.svg" },  
+    { "id": 6, "title": "Gifts", "fileName": "gifts.svg" }
+]  

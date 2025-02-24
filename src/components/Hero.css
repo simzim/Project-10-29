@@ -60,3 +60,8 @@
     margin: 30px auto 38px auto; 
 
 }
+
+.dark-line {
+    min-height: 40px;
+    background-color: var(--green);
+}

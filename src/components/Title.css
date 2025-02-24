@@ -1,0 +1,25 @@
+.title-box {
+    padding: 32px 0;
+    border-bottom: 1px solid var(--black);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    color: var(--black);
+    font-weight: 600;
+    font-size: 56px;
+}
+
+.green-text{
+    color: var(--green);
+}
+
+.title-link {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 30px;
+    text-transform: uppercase;
+}
