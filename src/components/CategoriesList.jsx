@@ -1,4 +1,4 @@
-import './CategoriesList.css'
+import './componentsStyle/CategoriesList.css'
 import { useEffect, useState } from 'react';
 import Category from './Category';
 

@@ -1,4 +1,4 @@
-import './Button.css';
+import './componentsStyle/Button.css';
 
 export default function Button({className, children = 'shop now', href='#', ...props}){
     return(

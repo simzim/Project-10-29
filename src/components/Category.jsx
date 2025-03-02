@@ -1,4 +1,4 @@
-import './Category.css';
+import './componentsStyle/Category.css';
 
 export default function Category({title, imageSrc}) {
   return (

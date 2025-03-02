@@ -1,4 +1,4 @@
-import './TopBaner.css';
+import './componentsStyle/TopBaner.css';
 
 export default function TopBaner() {
   return (
