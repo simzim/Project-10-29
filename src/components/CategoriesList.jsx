@@ -1,36 +1,40 @@
 import './componentsStyle/CategoriesList.css'
-import { useEffect, useState } from 'react';
+import useFetch from '../hooks/useFetch';
 import Category from './Category';
 
 export default function CategoriesList(){
 
-const [categories, setCategories] = useState([]);
+    const categories = useFetch(
+        'https://gist.githubusercontent.com/simzim/a76940b0cbdc3bcb49c4d3db453c5260/raw/25c60010ee869b52bf62d37ea40dbfbbc438db7c/plantShopCategory.json', 'category', 'fileName')
 
-useEffect(() => {
-    const fetchCategories = async () =>{
-        try{
-            const response = await fetch('https://gist.githubusercontent.com/simzim/a76940b0cbdc3bcb49c4d3db453c5260/raw/25c60010ee869b52bf62d37ea40dbfbbc438db7c/plantShopCategory.json')
-            const data = await response.json();
-            console.log(data);
 
-            const categoriesWithImages = await Promise.all(data.map(async (category) => {
-                const imagePath = await
-                import(`../img/category/${category.fileName}`);
-                return {
-                    ...category,
-                    imageSrc: imagePath.default,
-                };
-            }));
+// const [categories, setCategories] = useState([]);
 
-            console.log(categoriesWithImages);
-            setCategories(categoriesWithImages);
+// useEffect(() => {
+//     const fetchCategories = async () =>{
+//         try{
+//             const response = await fetch('https://gist.githubusercontent.com/simzim/a76940b0cbdc3bcb49c4d3db453c5260/raw/25c60010ee869b52bf62d37ea40dbfbbc438db7c/plantShopCategory.json')
+//             const data = await response.json();
+//             console.log(data);
 
-        }catch(error){
-            console.error('Klaida gaunant kategorijas', error);
-        }
-    }
-    fetchCategories();
-}, []);
+//             const categoriesWithImages = await Promise.all(data.map(async (category) => {
+//                 const imagePath = await
+//                 import(`../img/category/${category.fileName}`);
+//                 return {
+//                     ...category,
+//                     imageSrc: imagePath.default,
+//                 };
+//             }));
+
+//             console.log(categoriesWithImages);
+//             setCategories(categoriesWithImages);
+
+//         }catch(error){
+//             console.error('Klaida gaunant kategorijas', error);
+//         }
+//     }
+//     fetchCategories();
+// }, []);
 
 return (
     <div className='categories-list'>

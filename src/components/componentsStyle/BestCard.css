@@ -1,0 +1,48 @@
+.best-card {
+    padding: 20px;
+    max-width: 384px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 23px rgba(80, 107, 82, 0.13);
+    border-radius: 16px;
+}
+
+.best-card-link{
+    color: var(--black);
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.best-img{
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+}
+
+.best-overlay {
+    position: absolute;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    color: var(--white);
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+    width: 100%;
+    height: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+   
+}
+
+
+.best-title{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.2em;
+    text-shadow: 0px 4px 4px rgba(52, 52, 52, 0.25);
+    letter-spacing: 0.2em;
+    max-width: 70%;
+}
