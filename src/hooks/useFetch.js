@@ -1,34 +1,53 @@
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
-function useFetch(url, folder, apiImg){
+function useFetch(url, folder, apiImg) {
 
-  const [result, setResult] = useState([])
+    const [data, setData] = useState([])
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-      useEffect(() => {
-          const fetchData = async () => {
-              try {
-                  const response = await fetch(url);
-                  const data = await response.json();
-                  console.log(data);
-                
-                  const dataWithImages = await Promise.all(data.map(async (d) => {
-                    
-                    const imagePath = await 
-                    import(`../img/${folder}/${d[apiImg]}`);  
-                                       
+    useEffect(() => {
+        const fetchData = async () => {
+
+            setLoading(true);
+            setError(null);
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Failed to retrieve data from the API');
+                }
+                const data = await response.json();
+                //console.log(data);
+
+                const dataWithImages = await Promise.all(data.map(async (d) => {
+                    let imagePath;
+                    try {
+                        imagePath = await import(`../img/${folder}/${d[apiImg]}`);
+                    } catch (error) {
+                        imagePath = await import(`../img/empty.svg`);
+                    }
+                    // const imagePath = await 
+                    // import(`../img/${folder}/${d[apiImg]}`);  
+
                     return {
-                        ... d,
+                        ...d,
                         imageSrc: imagePath.default,
                     };
-                    
+
                 }));
-                    setResult(dataWithImages);
-              } catch (error){
-                  console.error('Klaida gaunant duomenis', error);
-              }
-          };
-          fetchData();
-      }, []);
-      return result;
+                // loader testavimas
+                //await new Promise((resolve) => setTimeout(resolve, 5000));
+
+                setData(dataWithImages);
+            } catch (error) {
+                setError(error.message); 
+            } finally {
+                setLoading(false); 
+            }
+        };
+        fetchData();
+    }, [url, folder, apiImg]); 
+    return { data, loading, error };
 }
 export default useFetch;

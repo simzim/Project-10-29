@@ -1,0 +1,73 @@
+.plant-card {
+    background-color: #fff;
+    padding: 20px;
+    gap: 16px;
+
+    width: 282px;
+    height: 418.5px;
+    box-shadow: 0px 8px 23px rgba(80, 107, 82, 0.13);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-box{
+    text-align: center;
+    position: relative;
+}
+
+.discount-block {
+    position: absolute;
+    color: #fff;
+    background-image: url(../../img/discount-bg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 64px;
+    height: 64px;
+    right: 0;
+    top:10px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.plant-img{
+    width: auto;
+    max-height: 219px;
+    border-radius: 8px;
+    
+    margin: 0 auto;
+}
+
+.card-text{
+    margin: 16px 0;
+    margin-bottom: auto;
+}
+
+.plant-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+
+}
+
+.plant-price, .discounted-price{
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+}
+
+.plant-price-red{
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--red);
+    text-decoration-line: line-through;
+    padding-left: 10px;
+    display: inline-block;
+
+}
+
+
