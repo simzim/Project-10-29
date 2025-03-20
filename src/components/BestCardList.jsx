@@ -5,15 +5,7 @@ import RiseLoader from "react-spinners/RiseLoader";
 
 export default function BestCardList(){
 
-    //    // const [bestcards, setBestCards] = useState([]);
-
-    //    const bestcards = useFetch(
-    //     'https://gist.githubusercontent.com/simzim/b210a5a8c289bc8189bfe207acea3801/raw/09cba377c8d554695f25b6da87eeb2b67aa72133/BestTags.json', 
-    //     'bestSelling', 
-    //     'fileName')
-
-
-    const { data: bestcards, loading, error } = useFetch(
+     const { data: bestcards, loading, error } = useFetch(
         'https://gist.githubusercontent.com/simzim/b210a5a8c289bc8189bfe207acea3801/raw/09cba377c8d554695f25b6da87eeb2b67aa72133/BestTags.json', 
         'bestSelling', 
         'fileName')

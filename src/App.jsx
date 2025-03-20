@@ -4,6 +4,7 @@ import SectionHero from './components/SectionHero';
 import SectionBest from './components/SectionBest';
 import SectionHot from './components/SectionHot';
 import SectionDeals from './components/SectionDeals';
+import SectionTestimonials from './components/SectionTestimonials';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <SectionBest/>
       <SectionHot/>
       <SectionDeals/>
+      <SectionTestimonials/>
     </div>
   );
 }
