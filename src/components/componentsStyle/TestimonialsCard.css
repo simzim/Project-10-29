@@ -1,0 +1,47 @@
+.testimonials-card{
+    background-color: var(--white);
+    padding: 32px 30px 28px 30px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    max-width: 340px;
+    box-shadow: 0px 4px 24px rgba(139, 167, 178, 0.16);
+    border-radius: 6px;
+  }
+  .test-card-text {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .test-client-text {
+    font-size: 22px;
+    line-height: 29px;
+    color: var(--black);
+    margin: 20px 0 6px 0;
+  }
+  .test-client-name{
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--textgrey);
+    font-weight: 400;
+    
+  }
+  
+  .rating {  
+    margin-bottom: 10px;  
+  }  
+  
+  .star {  
+    font-size: 24px;  
+    color: lightgray; /* Neaktyvios žvaigždutės spalva */  
+  }  
+  
+  .star.full {  
+    color: var(--green); /* Pilnai užpildytos žvaigždutės spalva */  
+  }  
+  .star.half {  
+    color: var(--green);  
+    background: linear-gradient(to right, var(--green) 55%, lightgray 45%);  
+    background-clip: text;  
+    -webkit-text-fill-color: transparent;  
+  }  

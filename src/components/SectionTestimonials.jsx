@@ -1,11 +1,7 @@
 import './componentsStyle/SectionTestimonials.css'
-// import TestimonialsList from './TestimonialsList';
+import TestimonialsList from './TestimonialsList';
 
 export default function SectionTestimonials(){
-
-    //  const [testimonials, setTestimonials] = useState([]);
-    
-      
 
     return (
         <section className='light-bg'>
@@ -13,7 +9,7 @@ export default function SectionTestimonials(){
                 <h2 className='testimonials-title'>Testimonials</h2>
                 <p className='testimonials-text'>Plant parents love us</p>
                 
-                {/* <TestimonialsList testimonials={testimonials}/> */}
+                <TestimonialsList/>
             </div>
         </section>
     );

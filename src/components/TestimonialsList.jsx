@@ -1,12 +1,12 @@
 import TestimonialsCard from './TestimonialsCard';
-import './TestimonialsList.css';
+import './componentsStyle/TestimonialsList.css';
 import RiseLoader from "react-spinners/RiseLoader";
 import useFetch from '../hooks/useFetch';
 
 export default function TestimonialsList(){
 
     const { data: testimonials, loading, error } = useFetch(
-        'https://gist.githubusercontent.com/simzim/b210a5a8c289bc8189bfe207acea3801/raw/09cba377c8d554695f25b6da87eeb2b67aa72133/BestTags.json', 
+        'https://gist.githubusercontent.com/simzim/8baf7cc7f3cd739a5a17c151098e0898/raw/cbd3d74805690135f6ed538206264ac73c52d0ac/testimonials.json', 
         'clients', 
         'img')
 

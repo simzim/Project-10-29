@@ -26,7 +26,7 @@ function useFetch(url, folder, apiImg) {
                     try {
                         imagePath = await import(`../img/${folder}/${d[apiImg]}`);
                     } catch (error) {
-                        imagePath = await import(`../img/empty.svg`);
+                        imagePath = await import(`../img/${folder}/empty.svg`);
                     }
                     // const imagePath = await 
                     // import(`../img/${folder}/${d[apiImg]}`);  
