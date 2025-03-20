@@ -7,6 +7,7 @@ function useFetch(url, folder, apiImg) {
     const [error, setError] = useState(null);
 
     useEffect(() => {
+        console.log('useEffect vyksta su url:', url, 'folder:', folder, 'apiImg:', apiImg);
         const fetchData = async () => {
 
             setLoading(true);

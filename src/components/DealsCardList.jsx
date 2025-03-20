@@ -1,16 +1,9 @@
-import './componentsStyle/HotCardList.css';
+import './componentsStyle/DealsCardList.css';
 import PlantCard from './PlantCard';
 import RiseLoader from "react-spinners/RiseLoader";
 import { useProducts } from '../hooks/useProducts';
 
-
-export default function HotCardList(){
-
-    // const products = useFetch(
-    // 'https://gist.githubusercontent.com/simzim/f6ce627e8265fc219ce5c3eb72144942/raw/94298c766cc28bedd1878f136317980307761310/plants.json', 
-    // 'plants', 
-    // 'image')
-
+export default function DealsList(){
 
     const { products, loading, error } = useProducts();
 
@@ -30,25 +23,28 @@ export default function HotCardList(){
         </div> 
        );
 
+    const sortedProducts = products.sort((a, b) => b.discount - a.discount);  
+    const topDiscounted = sortedProducts.slice(0, 4);  
 
-    const filteredProducts = products.filter(product => product.rating === 5);  
-                    
     return(
         <div className='hotCards-list'>
             {
-                filteredProducts.map((card) =>(
-                    
+                topDiscounted.map((card) =>(
                     <PlantCard
                         key={card.id}
                         plantid={card.id}
                         imageSrc={card.imageSrc}
                         title ={card.title}
                         price = {card.price}
-                        showDiscount={false}
+                        showDiscount={true}
                         discount={card.discount}
                     />
                 ))
             }
+
         </div>
+
+
     )
+
 }

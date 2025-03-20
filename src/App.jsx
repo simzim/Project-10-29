@@ -3,7 +3,7 @@ import SectionCategories from './components/SectionCategories';
 import SectionHero from './components/SectionHero';
 import SectionBest from './components/SectionBest';
 import SectionHot from './components/SectionHot';
-
+import SectionDeals from './components/SectionDeals';
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
       <SectionCategories/>
       <SectionBest/>
       <SectionHot/>
+      <SectionDeals/>
     </div>
   );
 }
